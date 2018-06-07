@@ -12,3 +12,6 @@ https://drive.google.com/file/d/1JITk-XLM5QzwZKTDoZwyngZ4ckXGBmfp/view?usp=shari
 1. react
 1. bulma / bloomers (css)
 1. firebase (login)
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
