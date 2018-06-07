@@ -8,7 +8,7 @@ Off the Cuff is the website for my podcast, which needs quite the overhaul to be
 ## API ERD
 https://drive.google.com/file/d/1JITk-XLM5QzwZKTDoZwyngZ4ckXGBmfp/view?usp=sharing
 
-## planned frameworks
+## Planned Frameworks & Tools
 1. react
 1. bulma / bloomers (css)
 1. firebase (login)
