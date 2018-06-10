@@ -1,0 +1,28 @@
+{
+    "users":[
+        {
+            "id": "auth0|5b1946a155f2302168ff47c3",
+            "displayName": "Your Host Levi",
+            "name": "Levi",
+            "bio": "",
+            "status": "",
+            "img": "https://s.gravatar.com/avatar/37ae8814361f55ea127bf1407e99cf48?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fme.png"
+        },
+        {
+            "id": "auth0|5b1995a755f2302168ff5ecd",
+            "displayName": "Hayley",
+            "name":"Hayley",
+            "bio":"",
+            "status":"",
+            "img": "https://s.gravatar.com/avatar/d32a987d85322f6409e54fcc068a7782?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fha.png"
+        },
+        {
+            "id":"auth0|5b1a962aa76b7021692521a4",
+            "displayName":"jessica.nicole.swift",
+            "name":"Jessica",
+            "bio":"",
+            "status":"",
+            "img":"https://s.gravatar.com/avatar/b57114922bd6bcd457e34440bbba72af?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fje.png"
+        }
+    ]
+}
