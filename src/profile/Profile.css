@@ -1,0 +1,17 @@
+#name_change{
+    margin: 0 auto;
+}
+
+#bio_edits{
+    height:200px;
+}
+
+#save_changes{
+    width:150px;
+    margin: 10px auto 0;
+}
+
+#status_edits{
+    width:25%;
+    margin: 0 auto;
+}
