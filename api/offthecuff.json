@@ -1,28 +1,38 @@
 {
-    "users":[
-        {
-            "id": "auth0|5b1946a155f2302168ff47c3",
-            "displayName": "Your Host Levi",
-            "name": "Levi",
-            "bio": "",
-            "status": "",
-            "img": "https://s.gravatar.com/avatar/37ae8814361f55ea127bf1407e99cf48?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fme.png"
-        },
-        {
-            "id": "auth0|5b1995a755f2302168ff5ecd",
-            "displayName": "Hayley",
-            "name":"Hayley",
-            "bio":"",
-            "status":"",
-            "img": "https://s.gravatar.com/avatar/d32a987d85322f6409e54fcc068a7782?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fha.png"
-        },
-        {
-            "id":"auth0|5b1a962aa76b7021692521a4",
-            "displayName":"jessica.nicole.swift",
-            "name":"Jessica",
-            "bio":"",
-            "status":"",
-            "img":"https://s.gravatar.com/avatar/b57114922bd6bcd457e34440bbba72af?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fje.png"
-        }
-    ]
+  "users": [
+    {
+      "id": "auth0|5b1946a155f2302168ff47c3",
+      "displayName": "Your Host Levi",
+      "name": "Levi",
+      "bio": "In aftertaste brewed, caramelization aftertaste flavour single origin cortado percolator, affogato et mug skinny cream sweet, id, grinder trifecta instant aromatic extra aftertaste. Brewed cinnamon con panna robust barista grounds, medium, et, wings fair trade, medium, extraction spoon grinder, body, fair trade siphon cultivar coffee flavour cappuccino dark. Iced crema, dark con panna macchiato irish white at pumpkin spice latte, shop, bar lungo americano macchiato black et seasonal sweet. Mazagran java, café au lait turkish aromatic roast mug trifecta doppio latte, in, sugar chicory aroma lungo sugar. French press seasonal aroma, frappuccino, barista eu spoon, aftertaste so, espresso percolator aftertaste flavour robusta, latte redeye doppio, mug decaffeinated caffeine sit organic americano extra. Brewed so, spoon dripper chicory coffee, macchiato body, arabica, con panna robust iced sit steamed. Kopi-luwak, redeye, id mazagran turkish cup aged, whipped, mazagran plunger pot redeye seasonal shop robust.",
+      "status": ">:(",
+      "img": "https://s.gravatar.com/avatar/37ae8814361f55ea127bf1407e99cf48?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fme.png"
+    },
+    {
+      "id": "auth0|5b1995a755f2302168ff5ecd",
+      "displayName": "Hayley",
+      "name": "Hayley",
+      "bio": "",
+      "status": "",
+      "img": "https://s.gravatar.com/avatar/d32a987d85322f6409e54fcc068a7782?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fha.png"
+    },
+    {
+      "id": "auth0|5b1a962aa76b7021692521a4",
+      "displayName": "jessica.nicole.swift",
+      "name": "Jessica",
+      "bio": "",
+      "status": "",
+      "img": "https://s.gravatar.com/avatar/b57114922bd6bcd457e34440bbba72af?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fje.png"
+    },
+    {
+      "id": "_DdPLea"
+    },
+    {
+      "id": "auth0|5b1fea6b157859716f2deed3",
+      "displayName": "",
+      "name": "",
+      "status": "",
+      "img": "https://s.gravatar.com/avatar/e6749b72d014294a5d849efff1b5cfd3?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fle.png"
+    }
+  ]
 }

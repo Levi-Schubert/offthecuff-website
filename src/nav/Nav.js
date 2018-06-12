@@ -11,7 +11,7 @@ export default class Nav extends Component{
 
     authenticated = function(authenticated){
         if(authenticated){
-            return <a id="nav__logout" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Logout</a>
+            return <a id="nav__logout" className="navbar-item is-unselectable" onClick={this.props.viewHandler}><figure className="image is-24x24"><img className="is-rounded" src={this.props.user.img}/> </figure>Logout</a>
         }else{
             return <a id="nav__login" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Login</a>
         }
@@ -22,6 +22,8 @@ export default class Nav extends Component{
             <nav className="navbar">
                 <div className="navbar-brand container-row">
                     <a id="nav__home" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Home</a>
+                    <a id="nav__forum" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Forum</a>
+                    <a id="nav__profile" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Profile</a>
                     {this.authenticated(this.props.authenticated)}
                 </div>
             </nav>
