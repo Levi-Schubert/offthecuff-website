@@ -23,7 +23,7 @@ export default class Nav extends Component{
                 <div className="navbar-brand container-row">
                     <a id="nav__home" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Home</a>
                     <a id="nav__forum" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Forum</a>
-                    <a id="nav__profile" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Profile</a>
+                    <a id={`nav__profile${this.props.authedUser}`} className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Profile</a>
                     {this.authenticated(this.props.authenticated)}
                 </div>
             </nav>

@@ -7,15 +7,17 @@ export default class Profile extends Component{
     state={
         user :{
             id: "",
-            displayName:"Your displayName",
-            name:"Name",
-            bio:"In aftertaste brewed, caramelization aftertaste flavour single origin cortado percolator, affogato et mug skinny cream sweet, id, grinder trifecta instant aromatic extra aftertaste. Brewed cinnamon con panna robust barista grounds, medium, et, wings fair trade, medium, extraction spoon grinder, body, fair trade siphon cultivar coffee flavour cappuccino dark. Iced crema, dark con panna macchiato irish white at pumpkin spice latte, shop, bar lungo americano macchiato black et seasonal sweet. Mazagran java, café au lait turkish aromatic roast mug trifecta doppio latte, in, sugar chicory aroma lungo sugar. French press seasonal aroma, frappuccino, barista eu spoon, aftertaste so, espresso percolator aftertaste flavour robusta, latte redeye doppio, mug decaffeinated caffeine sit organic americano extra. Brewed so, spoon dripper chicory coffee, macchiato body, arabica, con panna robust iced sit steamed. Kopi-luwak, redeye, id mazagran turkish cup aged, whipped, mazagran plunger pot redeye seasonal shop robust.",
-            status:"Your status here",
-            img:"https://s.gravatar.com/avatar/37ae8814361f55ea127bf1407e99cf48?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fme.png"
+            displayName:"",
+            bio:"",
+            status:"",
+            img: ""
         },
         editing:false,
         bio_edits:"",
-        status_edits:""
+        status_edits:"",
+        name_edits: "",
+        error: "",
+        userList: []
     }
 
     editable = function(){
@@ -41,7 +43,7 @@ export default class Profile extends Component{
     }.bind(this)
 
     save = function(){
-        let userUpdate = {id: this.state.user.id, displayName: this.state.user.displayName, name: this.state.user.name, bio: this.state.bio_edits, status: this.state.status_edits, img: this.state.user.img}
+        let userUpdate = {id: this.state.user.id, displayName: this.state.user.displayName, bio: this.state.bio_edits, status: this.state.status_edits, img: this.state.user.img}
         document.getElementById("save_changes").classList.toggle("is-loading")
         fetch(`${this.props.api}/users/${this.state.user.id}`, {
             headers:{
@@ -57,11 +59,49 @@ export default class Profile extends Component{
 
     }.bind(this)
 
+    saveName = function(){
+        this.setState({error: ""})
+        let error = false
+        this.state.userList.forEach(name => {
+            if(name === this.state.name_edits && error !== true){
+                error = true
+                this.setState({error: "name_taken"})
+            }
+        })
+        if(error === false){
+            let userUpdate = {id: this.state.user.id, displayName: this.state.name_edits, bio: this.state.user.bio, status: this.state.user.status, img: this.state.user.img}
+            fetch(`${this.props.api}/users/${this.state.user.id}`, {
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userUpdate),
+                method: 'PUT'
+                }).then(r => {
+                    this.setState({user: userUpdate})
+                })
+        }
+    }.bind(this)
+
+    notification = function(){
+        switch(this.state.error){
+            case("name_taken"):
+                return <div className="level notification is-danger"><h3 className="is-title is-warning level-item">Display name is taken</h3></div>
+        }
+    }.bind(this)
+
+    displayName = function(){
+        if(this.state.userList.length > 0 && this.state.user.displayName === ""){
+            return <div id="name_change" className="level"> <input id="name_edits" type="text" className="input level-item" onChange={this.change} placeholder="Please choose a display name"/> <input type="button" id="save_name" className="button is-info level-item" value="Save" onClick={this.saveName}/></div>
+        }else{
+            return <h1 className= "title level-item">{this.state.user.displayName}</h1>
+        }
+    }
+
     editing = function(comp){
         switch(comp){
             case("status"):
                 if(this.state.editing){
-                    return <input id="status_edits" type="text" className="input" onChange={this.change} value={this.state.status_edits}/>
+                    return <input id="status_edits" type="text" className="input is-small" onChange={this.change} value={this.state.status_edits}/>
                 }else{
                     return <p className="level-item">{this.state.user.status}</p>                
                 }
@@ -83,7 +123,18 @@ export default class Profile extends Component{
     componentDidMount(){
         if(this.props.user){
             fetch(`${this.props.api}/users/${this.props.user}`).then(r => r.json()).then(user => {
-                this.setState({user:{img: user.img, displayName: user.displayName, bio: user.bio, status: user.status, name: user.name, id: this.props.user}, bio_edits: user.bio, status_edits: user.status})
+                this.setState({user:{img: user.img, displayName: user.displayName, bio: user.bio, status: user.status, id: this.props.user}, bio_edits: user.bio, status_edits: user.status})
+                if(user.displayName === "" && this.props.user === this.props.authedUser){
+                    fetch(`${this.props.api}/users`).then(r => r.json()).then(users => {
+                        let displayNames = []
+                        users.forEach(user => {
+                            if(user.displayName !== ""){
+                                displayNames.push(user.displayName)
+                            }
+                        })
+                        this.setState({userList: displayNames})
+                    })
+                }
             })
         }
     }
@@ -91,8 +142,9 @@ export default class Profile extends Component{
     render(){
         return (
             <section>
+                {this.notification()}
             <div className="level">
-                <h1 className= "title level-item">{this.state.user.displayName}</h1>
+                {this.displayName()}
             </div>
             <div className="level">
                 {this.editing("status")} 
@@ -106,10 +158,6 @@ export default class Profile extends Component{
                             </figure>
                         </div>
                     </div>
-                    <div className="level">
-                        <h1 className="title level-item">{this.state.user.name}</h1>
-                    </div>
-                    
                 </div>
                 <div className="media-content notification">
                     {this.editing("bio")}

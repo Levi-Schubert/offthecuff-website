@@ -25,7 +25,8 @@ class App extends Component {
     userId: null,
     authenticated: false,
     userData: {},
-    api: "http://localhost:5001"
+    api: "http://localhost:5001",
+    profile: null
   }
   
   checkCredentials = function(){
@@ -42,10 +43,11 @@ class App extends Component {
           let data = {
             id: decode(idToken).sub,
             displayName: "",
-            name: "",
+            bio: "",
             status: "",
             img: decode(idToken).picture
           }
+          this.setState({userData: data})
           fetch(`${this.state.api}/users`, {
             headers:{
               'Content-Type': 'application/json'
@@ -69,7 +71,7 @@ class App extends Component {
     if (e.hasOwnProperty("target")) {
       currentview = e.target.id.split("__")[1]
       if(e.target.id.split("__").length > 2){
-          user = e.target.id.split("__")[2]
+          this.setState({profile: e.target.id.split("__")[2]})
       }
     }
     if(currentview === "logout"){
@@ -82,7 +84,7 @@ class App extends Component {
   view = () =>{
     switch(this.state.view){
       case("profile"):
-        return <Profile api={this.state.api} user={this.state.userId} authedUser={this.state.userId}/>
+        return <Profile api={this.state.api} user={this.state.profile} authedUser={this.state.userId}/>
       case("forum"):
         return <Forum/>
       case("login"):
@@ -99,7 +101,7 @@ class App extends Component {
   render() {
     return (
       <div className="hero-body">
-        <Navbar viewHandler={this.showView} active={this.state.view} authenticated={this.state.authenticated} user={this.state.userData}/>
+        <Navbar viewHandler={this.showView} active={this.state.view} authenticated={this.state.authenticated} authedUser={`__${this.state.userId}`} user={this.state.userData}/>
         <hr />
         {this.view()}
       </div>
