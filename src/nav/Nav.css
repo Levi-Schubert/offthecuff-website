@@ -1,0 +1,15 @@
+.navbar-brand{
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    width: 100%;
+}
+
+img{
+
+    /* border: 1px solid grey; */
+}
