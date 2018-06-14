@@ -118,24 +118,32 @@ export default class Profile extends Component{
                     return <p id="bio" className="content">{this.state.user.bio}</p>
                 }
         }
-    }
+	}
+	
+	getData = function(){
+		fetch(`${this.props.api}/users/${this.props.user}`).then(r => r.json()).then(user => {
+			this.setState({user:{img: user.img, displayName: user.displayName, bio: user.bio, status: user.status, id: this.props.user}, bio_edits: user.bio, status_edits: user.status})
+			if(user.displayName === "" && this.props.user === this.props.authedUser){
+				fetch(`${this.props.api}/users`).then(r => r.json()).then(users => {
+					let displayNames = []
+					users.forEach(user => {
+						if(user.displayName !== ""){
+							displayNames.push(user.displayName)
+						}
+					})
+					this.setState({userList: displayNames})
+				})
+			}
+		})
+	}.bind(this)
+
+	componentWillUpdate(){
+		this.getData()
+	}
 
     componentDidMount(){
         if(this.props.user){
-            fetch(`${this.props.api}/users/${this.props.user}`).then(r => r.json()).then(user => {
-                this.setState({user:{img: user.img, displayName: user.displayName, bio: user.bio, status: user.status, id: this.props.user}, bio_edits: user.bio, status_edits: user.status})
-                if(user.displayName === "" && this.props.user === this.props.authedUser){
-                    fetch(`${this.props.api}/users`).then(r => r.json()).then(users => {
-                        let displayNames = []
-                        users.forEach(user => {
-                            if(user.displayName !== ""){
-                                displayNames.push(user.displayName)
-                            }
-                        })
-                        this.setState({userList: displayNames})
-                    })
-                }
-            })
+            this.getData()
         }
     }
 
