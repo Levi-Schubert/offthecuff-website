@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 export default class Thread extends Component{
 
-	
 
 	render(){
 		return(
@@ -26,7 +25,7 @@ export default class Thread extends Component{
 				<div className="media-content">
 					<div className="tile is-parent">
 						<div className="tile is-child has-text-left">
-							<h1 className="title is-5">{this.props.thread.title}</h1>
+							<a id={`forum__thread__${this.props.thread.id}`} className="title is-5" onClick={this.props.changeView}> {this.props.thread.title}</a>
 							<p>{this.props.thread.initialPost}</p>
 						</div>
 					</div>

@@ -1,8 +1,14 @@
 #forum{
 	width:60%;
 	max-width:850px;
-	max-height: calc(100vh - 220px);
+}
+#pages{
+	max-height: calc(100vh - 260px);
 	overflow-y: auto;
+}
+
+#page__nav{
+	margin-top: 20px;
 }
 
 .usertile{
