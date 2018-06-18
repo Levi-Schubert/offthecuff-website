@@ -11,6 +11,14 @@
 	margin-top: 20px;
 }
 
+#thread__link a{
+	text-decoration: none;
+}
+
+#thread__link a:hover{
+	color: hsl(204, 86%, 53%);
+}
+
 .usertile{
 	min-width:22%;
 	max-width: 22%;
@@ -19,4 +27,16 @@
 .thread{
 	margin-left: 15px;
 	margin-right:15px;
+}
+
+.new__thread{
+	margin:5px 0 5px;
+}
+
+.thread__box{
+	margin:auto 2%;
+}
+
+#post{
+	height:150px;
 }

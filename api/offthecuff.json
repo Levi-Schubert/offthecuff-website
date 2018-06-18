@@ -78,6 +78,20 @@
       "title": "Welcome to the Off the Cuff Forum!",
       "initialPost": "This is the initial post text",
       "bump": 1528834368722
+    },
+    {
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "title": "Testing new thread creation",
+      "initialPost": "This is the initial post, created for the thread creation",
+      "bump": 1529344709507,
+      "id": 5
+    },
+    {
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "title": "Another new test thread after adjusting the api call",
+      "initialPost": "Here is the post again let's make sure everything is perfect",
+      "bump": 1529344888109,
+      "id": 6
     }
   ],
   "posts": [
@@ -108,6 +122,20 @@
       "userId": "auth0|5b1946a155f2302168ff47c3",
       "content": "This is the initial post text",
       "timestamp": 1528834368722
+    },
+    {
+      "threadId": 5,
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "This is the initial post, created for the thread creation",
+      "timestamp": 1529344709507,
+      "id": 5
+    },
+    {
+      "threadId": 6,
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "Here is the post again let's make sure everything is perfect",
+      "timestamp": 1529344888109,
+      "id": 6
     }
   ],
   "episodes": [

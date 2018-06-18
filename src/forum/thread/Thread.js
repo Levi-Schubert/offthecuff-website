@@ -1,12 +1,13 @@
 import React, {Component} from "react"
 import PageNav from "../pagenav/Pagenav"
 import Page from "./Page"
+import left from "../../img/left.png"
 
 export default class Thread extends Component{
 	state = {
 		pages: [],
 		currentPage: 0,
-		thread: ""
+		title:""
 	}
 
 	loaded = function(){
@@ -42,6 +43,9 @@ export default class Thread extends Component{
 			}
 			this.setState({ pages: pagesArr })
 		})
+		fetch(`${this.props.api}/threads/${this.props.thread}`).then( r => r.json()).then(thread => {
+			this.setState({title: thread.title})
+		})
 	}.bind(this)
 
 	componentDidMount() {
@@ -50,13 +54,14 @@ export default class Thread extends Component{
 
 	render(){
 		return(
-			<div>
-				<section id="pages">
-					<h1 className="title">Thread</h1>
-					{this.loaded()}
+				<div>
+					<a id="thread__list" className="title" onClick={this.props.back}><img className="image is-32x32"src={left}/></a>
+					<h1 className="title">{this.state.title}</h1>
+					<section id="pages">
+						{this.loaded()}
+					</section>
 					<PageNav isFirst={(this.state.currentPage === 0)} isLast={(this.state.currentPage === this.state.pages.length -1)} changePage={this.changePage}/>
-				</section>
-			</div>
+				</div>
 		)
 	}
 }

@@ -87,7 +87,7 @@ class App extends Component {
 			case ("profile"):
 				return <Profile api={this.state.api} user={this.state.profile} authedUser={this.state.userId} />
 			case ("forum"):
-				return <Forum api={this.state.api} viewHandler={this.showView} />
+				return <Forum api={this.state.api} viewHandler={this.showView} authedUser={this.state.userId}/>
 			case ("login"):
 				return <Login />
 			case ("logout"):
