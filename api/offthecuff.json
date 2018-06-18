@@ -63,14 +63,14 @@
       "userId": "auth0|5b1995a755f2302168ff5ecd",
       "title": "Check this out!",
       "initialPost": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. H'ch', naflep athg ehye ngsyha'h y-nog ebunmaoth grah'n, h'ehye shtunggli f'llll kadishtu athg. Gnaiih h'ilyaa f'stell'bsna 'ai shagg chtenff hai, 'fhalma lloig llllagl naflDagon.",
-      "bump": 1528834408722
+      "bump": 1529351727671
     },
     {
       "id": 3,
       "userId": "auth0|5b1a962aa76b7021692521a4",
       "title": "Another Example forum thread",
       "initialPost": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. H'ch', naflep athg ehye ngsyha'h y-nog ebunmaoth grah'n, h'ehye shtunggli f'llll kadishtu athg. Gnaiih h'ilyaa f'stell'bsna 'ai shagg chtenff hai, 'fhalma lloig llllagl naflDagon.",
-      "bump": 1528834468722
+      "bump": 1529351561848
     },
     {
       "id": 4,
@@ -78,6 +78,27 @@
       "title": "Welcome to the Off the Cuff Forum!",
       "initialPost": "This is the initial post text",
       "bump": 1528834368722
+    },
+    {
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "title": "Testing new thread creation",
+      "initialPost": "This is the initial post, created for the thread creation",
+      "bump": 1529351261312,
+      "id": 5
+    },
+    {
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "title": "Another new test thread after adjusting the api call",
+      "initialPost": "Here is the post again let's make sure everything is perfect",
+      "bump": 1529352455360,
+      "id": 6
+    },
+    {
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "title": "Making another test thread  :D",
+      "initialPost": "this is the initial post that will also create a post object in the api",
+      "bump": 1529351698288,
+      "id": 7
     }
   ],
   "posts": [
@@ -108,6 +129,146 @@
       "userId": "auth0|5b1946a155f2302168ff47c3",
       "content": "This is the initial post text",
       "timestamp": 1528834368722
+    },
+    {
+      "threadId": 5,
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "This is the initial post, created for the thread creation",
+      "timestamp": 1529344709507,
+      "id": 5
+    },
+    {
+      "threadId": 6,
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "Here is the post again let's make sure everything is perfect",
+      "timestamp": 1529344888109,
+      "id": 6
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "Making a new post to add",
+      "timestamp": 1529351169449,
+      "id": 7
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "Here is another post",
+      "timestamp": 1529351198583,
+      "id": 8
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "this is so good!!!",
+      "timestamp": 1529351204525,
+      "id": 9
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "I made the forum aww yiss",
+      "timestamp": 1529351215293,
+      "id": 10
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "test this shit yo",
+      "timestamp": 1529351248344,
+      "id": 11
+    },
+    {
+      "threadId": "5",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "check it yo",
+      "timestamp": 1529351261312,
+      "id": 12
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "updating this shit yoooo",
+      "timestamp": 1529351362601,
+      "id": 13
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "updaatteee",
+      "timestamp": 1529351376758,
+      "id": 14
+    },
+    {
+      "threadId": "3",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "go to the front please",
+      "timestamp": 1529351394866,
+      "id": 15
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "testing",
+      "timestamp": 1529351476626,
+      "id": 16
+    },
+    {
+      "threadId": "3",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "testsad",
+      "timestamp": 1529351561848,
+      "id": 17
+    },
+    {
+      "threadId": 7,
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "this is the initial post that will also create a post object in the api",
+      "timestamp": 1529351698288,
+      "id": 18
+    },
+    {
+      "threadId": "2",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "This is a new post and should bump this thread to the top of the list",
+      "timestamp": 1529351727671,
+      "id": 19
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "trying to get this to make another page",
+      "timestamp": 1529352422458,
+      "id": 20
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "soon, so soon",
+      "timestamp": 1529352430595,
+      "id": 21
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "finally another page",
+      "timestamp": 1529352436602,
+      "id": 22
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "does it stay on the second page?",
+      "timestamp": 1529352448731,
+      "id": 23
+    },
+    {
+      "threadId": "6",
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "cool it does!",
+      "timestamp": 1529352455360,
+      "id": 24
     }
   ],
   "episodes": [

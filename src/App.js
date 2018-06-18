@@ -35,7 +35,7 @@ class App extends Component {
 			let access = this.state.auth.getAccessToken()
 			if (idToken) {
 				this.setState({ userId: decode(idToken).sub, authenticated: true, })
-				window.history.replaceState({}, document.title, ".")
+				// window.history.replaceState({}, document.title, ".")
 				fetch(`${this.state.api}/users/${decode(idToken).sub}`).then(r => r.json()).then(user => {
 					if (user.hasOwnProperty("id")) {
 						this.setState({ userData: user })
@@ -87,7 +87,7 @@ class App extends Component {
 			case ("profile"):
 				return <Profile api={this.state.api} user={this.state.profile} authedUser={this.state.userId} />
 			case ("forum"):
-				return <Forum api={this.state.api} viewHandler={this.showView} />
+				return <Forum api={this.state.api} viewHandler={this.showView} authedUser={this.state.userId}/>
 			case ("login"):
 				return <Login />
 			case ("logout"):

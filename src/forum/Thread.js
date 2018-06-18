@@ -24,7 +24,7 @@ export default class Thread extends Component{
 				</div>
 				<div className="media-content">
 					<div className="tile is-parent">
-						<div className="tile is-child has-text-left">
+						<div id="thread__link"className="tile is-child has-text-left">
 							<a id={`forum__thread__${this.props.thread.id}`} className="title is-5" onClick={this.props.changeView}> {this.props.thread.title}</a>
 							<p>{this.props.thread.initialPost}</p>
 						</div>

@@ -25,7 +25,7 @@ export default class Post extends Component{
 					<div className="tile is-parent">
 						<div className="tile is-child has-text-left">
 							<p>{this.props.post.content}</p>
-							<span>{(new Date(this.props.post.timestamp).toString().substring(4,21)).toString()}</span>
+							<span className="has-text-weight-semibold">{(new Date(this.props.post.timestamp).toString().substring(4,21)).toString()}</span>
 						</div>
 					</div>
 				</div>
