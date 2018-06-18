@@ -10,15 +10,15 @@
     {
       "id": "auth0|5b1995a755f2302168ff5ecd",
       "displayName": "Hayley",
-      "bio": "",
-      "status": "",
+      "bio": "Aliquip aute proident occaecat est cillum cupidatat magna velit officia. Occaecat Lorem elit occaecat ad laboris dolore ipsum laboris occaecat consequat dolore. Amet exercitation duis nulla exercitation non officia proident. Cillum eu dolore exercitation do reprehenderit irure aliquip Lorem aliquip. Aute duis in proident esse. Pariatur officia cupidatat Lorem ad Lorem reprehenderit mollit sunt. Minim ipsum sunt reprehenderit ad irure amet proident sunt aute. Proident ex qui voluptate proident quis sunt et cillum nostrud. Adipisicing dolor Lorem consectetur esse cillum ullamco reprehenderit exercitation est fugiat veniam eu. Sit qui consequat labore dolore eiusmod. Sint excepteur sit ut officia ipsum ea proident nostrud adipisicing aute cillum pariatur. Exercitation deserunt cillum dolor ad non consequat ullamco sint sunt consequat nisi minim.Nulla nostrud nisi cupidatat sit aute esse ea ut nostrud dolore nisi. Laborum culpa laboris irure id sunt cupidatat nostrud exercitation sint in. Tempor quis tempor ad quis aliquip culpa.",
+      "status": "This should be in my data",
       "img": "https://s.gravatar.com/avatar/d32a987d85322f6409e54fcc068a7782?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fha.png"
     },
     {
       "id": "auth0|5b1a962aa76b7021692521a4",
-      "displayName": "jessica.nicole.swift",
-      "bio": "",
-      "status": "",
+      "displayName": "Just Jess",
+      "bio": "Sit dolor consectetur laboris ipsum sit qui aliqua eu consectetur dolore. Consectetur sint tempor aute ex ullamco nulla duis commodo adipisicing ut voluptate incididunt. Nisi reprehenderit excepteur sint eu ipsum consectetur. Dolor nostrud eu magna sint ullamco ex ut magna ea. Minim velit ea adipisicing incididunt tempor quis proident duis veniam. Sint aliquip incididunt consectetur ullamco do. Amet duis incididunt dolore do. Sint aliquip nostrud labore nostrud quis nulla sint ut sunt quis magna.Commodo nisi quis Lorem aute ullamco laboris pariatur exercitation. Dolore commodo duis dolore aute qui adipisicing id ex veniam esse id ea sunt. Anim nulla irure non voluptate eu Lorem incididunt aliqua voluptate aliquip pariatur eiusmod. Deserunt quis id qui cillum elit aliquip cupidatat ullamco cupidatat. Duis eiusmod qui eiusmod amet sint ex amet excepteur nisi. Officia exercitation esse eu consequat. Enim duis ad ullamco eiusmod dolor commodo cupidatat esse magna.",
+      "status": "Eiusmod irure mollit aliqua incididunt magna.",
       "img": "https://s.gravatar.com/avatar/b57114922bd6bcd457e34440bbba72af?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fje.png"
     },
     {
@@ -34,26 +34,83 @@
       "bio": "too cool for school",
       "status": "chillin",
       "img": "https://s.gravatar.com/avatar/efb5bcbb43c45086ce6f96a78d1ae850?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fdf.png"
+    },
+    {
+      "id": "auth0|5b22d6258763ef35697610f3",
+      "displayName": "Megra",
+      "bio": "Hey I'm a super inappropriate person and I love nonsense things. K. Thanks. Bye.",
+      "status": ":middle-finger:",
+      "img": "https://s.gravatar.com/avatar/3342be3a51445c437e1505c9b925f69f?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fmd.png"
+    },
+    {
+      "id": "auth0|5b2409e08763ef356976480a",
+      "displayName": "ronny_jiggs",
+      "bio": "",
+      "status": "Bein a lil bitch",
+      "img": "https://s.gravatar.com/avatar/45f12c761701e7e230148e7a28bb4dd3?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fjo.png"
     }
   ],
-  "threads":[
+  "threads": [
     {
       "id": 1,
       "userId": "auth0|5b1946a155f2302168ff47c3",
-      "title": "Welcome to the Off the Cuff Forum!",
+      "title": "A forum thread again",
+      "initialPost": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. H'ch', naflep athg ehye ngsyha'h y-nog ebunmaoth grah'n, h'ehye shtunggli f'llll kadishtu athg. Gnaiih h'ilyaa f'stell'bsna 'ai shagg chtenff hai, 'fhalma lloig llllagl naflDagon.",
       "bump": 1528834428722
-    }
-  ],
-  "posts":[
+    },
     {
-      "id":1,
-      "threadId": 1,
-      "userId":"auth0|5b1946a155f2302168ff47c3",
-      "content": "Hey guys!, welcome to the official forum for the Off the Cuff podcast!",
-      "timestamp": 1528834428722
+      "id": 2,
+      "userId": "auth0|5b1995a755f2302168ff5ecd",
+      "title": "Check this out!",
+      "initialPost": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. H'ch', naflep athg ehye ngsyha'h y-nog ebunmaoth grah'n, h'ehye shtunggli f'llll kadishtu athg. Gnaiih h'ilyaa f'stell'bsna 'ai shagg chtenff hai, 'fhalma lloig llllagl naflDagon.",
+      "bump": 1528834408722
+    },
+    {
+      "id": 3,
+      "userId": "auth0|5b1a962aa76b7021692521a4",
+      "title": "Another Example forum thread",
+      "initialPost": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. H'ch', naflep athg ehye ngsyha'h y-nog ebunmaoth grah'n, h'ehye shtunggli f'llll kadishtu athg. Gnaiih h'ilyaa f'stell'bsna 'ai shagg chtenff hai, 'fhalma lloig llllagl naflDagon.",
+      "bump": 1528834468722
+    },
+    {
+      "id": 4,
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "title": "Welcome to the Off the Cuff Forum!",
+      "initialPost": "This is the initial post text",
+      "bump": 1528834368722
     }
   ],
-  "episodes":[
+  "posts": [
+    {
+      "id": 1,
+      "threadId": 1,
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. H'ch', naflep athg ehye ngsyha'h y-nog ebunmaoth grah'n, h'ehye shtunggli f'llll kadishtu athg. Gnaiih h'ilyaa f'stell'bsna 'ai shagg chtenff hai, 'fhalma lloig llllagl naflDagon.",
+      "timestamp": 1528834428722
+    },
+    {
+      "id": 2,
+      "threadId": 2,
+      "userId": "auth0|5b1995a755f2302168ff5ecd",
+      "content": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. H'ch', naflep athg ehye ngsyha'h y-nog ebunmaoth grah'n, h'ehye shtunggli f'llll kadishtu athg. Gnaiih h'ilyaa f'stell'bsna 'ai shagg chtenff hai, 'fhalma lloig llllagl naflDagon.",
+      "timestamp": 1528834408722
+    },
+    {
+      "id": 3,
+      "threadId": 3,
+      "userId": "auth0|5b1a962aa76b7021692521a4",
+      "content": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. H'ch', naflep athg ehye ngsyha'h y-nog ebunmaoth grah'n, h'ehye shtunggli f'llll kadishtu athg. Gnaiih h'ilyaa f'stell'bsna 'ai shagg chtenff hai, 'fhalma lloig llllagl naflDagon.",
+      "timestamp": 1528834468722
+    },
+    {
+      "id": 4,
+      "threadId": 4,
+      "userId": "auth0|5b1946a155f2302168ff47c3",
+      "content": "This is the initial post text",
+      "timestamp": 1528834368722
+    }
+  ],
+  "episodes": [
     {
       "id": 1,
       "title": "",

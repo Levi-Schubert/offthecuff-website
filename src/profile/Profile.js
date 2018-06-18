@@ -91,7 +91,7 @@ export default class Profile extends Component{
 
     displayName = function(){
         if(this.state.userList.length > 0 && this.state.user.displayName === ""){
-            return <div id="name_change" className="level"> <input id="name_edits" type="text" className="input level-item" onChange={this.change} placeholder="Please choose a display name"/> <input type="button" id="save_name" className="button is-info level-item" value="Save" onClick={this.saveName}/></div>
+            return <div id="name_change" className="level"> <input id="name_edits" type="text" value={this.state.name_edits} className="input level-item" onChange={this.change} placeholder="Please choose a display name"/> <input type="button" id="save_name" className="button is-info level-item" value="Save" onClick={this.saveName}/></div>
         }else{
             return <h1 className= "title level-item">{this.state.user.displayName}</h1>
         }
@@ -118,24 +118,34 @@ export default class Profile extends Component{
                     return <p id="bio" className="content">{this.state.user.bio}</p>
                 }
         }
-    }
+	}
+	
+	getData = function(user){
+		fetch(`${this.props.api}/users/${user}`).then(r => r.json()).then(user => {
+			this.setState({user:{img: user.img, displayName: user.displayName, bio: user.bio, status: user.status, id: this.props.user}, bio_edits: user.bio, status_edits: user.status})
+			if(user.displayName === "" && this.props.user === this.props.authedUser){
+				fetch(`${this.props.api}/users`).then(r => r.json()).then(users => {
+					let displayNames = []
+					users.forEach(user => {
+						if(user.displayName !== ""){
+							displayNames.push(user.displayName)
+						}
+					})
+					this.setState({userList: displayNames})
+				})
+			}
+		})
+	}.bind(this)
+
+	componentWillReceiveProps(nextProps) {
+		if(nextProps.user !== this.state.user.id){
+			this.getData(nextProps.user)
+		}
+	}
 
     componentDidMount(){
         if(this.props.user){
-            fetch(`${this.props.api}/users/${this.props.user}`).then(r => r.json()).then(user => {
-                this.setState({user:{img: user.img, displayName: user.displayName, bio: user.bio, status: user.status, id: this.props.user}, bio_edits: user.bio, status_edits: user.status})
-                if(user.displayName === "" && this.props.user === this.props.authedUser){
-                    fetch(`${this.props.api}/users`).then(r => r.json()).then(users => {
-                        let displayNames = []
-                        users.forEach(user => {
-                            if(user.displayName !== ""){
-                                displayNames.push(user.displayName)
-                            }
-                        })
-                        this.setState({userList: displayNames})
-                    })
-                }
-            })
+            this.getData(this.props.user)
         }
     }
 

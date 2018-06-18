@@ -1,0 +1,22 @@
+#forum{
+	width:60%;
+	max-width:850px;
+}
+#pages{
+	max-height: calc(100vh - 260px);
+	overflow-y: auto;
+}
+
+#page__nav{
+	margin-top: 20px;
+}
+
+.usertile{
+	min-width:22%;
+	max-width: 22%;
+}
+
+.thread{
+	margin-left: 15px;
+	margin-right:15px;
+}
