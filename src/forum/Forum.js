@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Page from "./Page"
 import Pagenav from "./pagenav/Pagenav"
 import "./Forum.css"
+import Thread from "./thread/Thread"
 
 export default class Forum extends Component {
 
@@ -31,6 +32,7 @@ export default class Forum extends Component {
 
 	showView = function(){
 		if(this.state.view === "thread"){
+			return <Thread api={this.props.api} thread={this.state.thread} viewHandler={this.props.viewHandler}/>
 			//create thread view here (include back button to return to pagelist)
 		}else{
 			return <div>
