@@ -58,7 +58,7 @@ export default class Forum extends Component {
 			let pagesArr = []
 			let page = []
 			for (let i = 0; i < threads.length; i += 1) {
-				if (page.length < 2) {
+				if (page.length < 5) {
 					page.push(threads[i])
 				} else {
 					pagesArr.push(page)
