@@ -7,7 +7,8 @@ export default class Thread extends Component{
 	state = {
 		pages: [],
 		currentPage: 0,
-		title:""
+		title:"",
+		newPost: ""
 	}
 
 	loaded = function(){
@@ -16,6 +17,54 @@ export default class Thread extends Component{
 		}
 	}.bind(this)
 
+	change = function(evt){
+		const stateToChange = {}
+		stateToChange[evt.target.id] = evt.target.value
+		this.setState(stateToChange)
+	}.bind(this)
+
+	post = function(){
+		//get post from state and post to api
+		let post = {
+			threadId: this.props.thread,
+			userId: this.props.authedUser,
+			content: this.state.newPost,
+			timestamp: new Date().getTime()
+		}
+		fetch(`${this.props.api}/posts`,{ 
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(post),
+			method: 'POST'
+			}).then(r => r.json()).then(post => {
+				//update the thread key bump with new timestamp
+				fetch(`${this.props.api}/threads/${this.props.thread}`, {
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({bump: post.timestamp}),
+					method: 'PATCH'
+				} ).then()
+				this.setState({newPost: ""})
+				this.getPosts()
+			})
+
+	}.bind(this)
+
+	newPost(){
+		if(this.props.authedUser === null){
+			return (<div className="notification thread__box post__box">
+					<textarea className="input" placeholder="Please log in to post to the forum" disabled/>
+					<input type="button" className="button is-info" value="Post" onClick={this.post} disabled/>
+				</div>)
+		}else{
+			return (<div className="notification thread__box post__box">
+					<textarea id="newPost" className="input" placeholder="New post" value={this.state.newPost} onChange={this.change}/>
+					<input type="button" className="button is-info" value="Post" onClick={this.post}/>
+				</div>)
+		}
+	}
 
 	changePage = function(e){
 		if(e.target.id === "next"){
@@ -55,10 +104,11 @@ export default class Thread extends Component{
 	render(){
 		return(
 				<div>
-					<a id="thread__list" className="title" onClick={this.props.back}><img className="image is-32x32"src={left}/></a>
+					<a className="title"><img id="thread__list" className="image is-32x32"src={left} onClick={this.props.back}/></a>
 					<h1 className="title">{this.state.title}</h1>
-					<section id="pages">
+					<section id="post__pages">
 						{this.loaded()}
+						{this.newPost()}
 					</section>
 					<PageNav isFirst={(this.state.currentPage === 0)} isLast={(this.state.currentPage === this.state.pages.length -1)} changePage={this.changePage}/>
 				</div>

@@ -104,13 +104,16 @@ export default class Forum extends Component {
 			if (e.target.id.split("__").length > 2) {
 				this.setState({ thread: e.target.id.split("__")[2] })
 			}
+			if(currentview === "list"){
+				this.getThreads()
+			}
 			this.setState({ view: currentview })
 		}
 	}.bind(this)
 
 	showView = function(){
 		if(this.state.view === "thread"){
-			return <Thread api={this.props.api} back={this.changeView} thread={this.state.thread} viewHandler={this.props.viewHandler}/>
+			return <Thread api={this.props.api} back={this.changeView} thread={this.state.thread} authedUser={this.props.authedUser} viewHandler={this.props.viewHandler}/>
 			//create thread view here (include back button to return to pagelist)
 		}else{
 			return <div>

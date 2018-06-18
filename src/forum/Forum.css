@@ -7,6 +7,11 @@
 	overflow-y: auto;
 }
 
+#post__pages{
+	max-height: calc(100vh - 340px);
+	overflow-y: auto;
+}
+
 #page__nav{
 	margin-top: 20px;
 }
@@ -35,6 +40,15 @@
 
 .thread__box{
 	margin:auto 2%;
+}
+
+.post__box{
+	margin-top:20px;
+}
+
+.post__box textarea{
+	height:100px;
+	margin-bottom: 10px;
 }
 
 #post{
