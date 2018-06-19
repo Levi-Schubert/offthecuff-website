@@ -19,10 +19,10 @@ export default class Pagenav extends Component{
 
 	render(){
 		return(
-			<nav id="page__nav" className="pagination is-centered" role="navigation" aria-label="pagination">
+			<div id="page__nav" className="pagination is-centered" role="navigation" aria-label="pagination">
 					{this.isFirst()}
 					{this.isLast()}
-			</nav>
+			</div>
 		)
 	}
 }

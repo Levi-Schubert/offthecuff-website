@@ -70,14 +70,14 @@
 			"userId": "auth0|5b1a962aa76b7021692521a4",
 			"title": "Another Example forum thread",
 			"initialPost": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. H'ch', naflep athg ehye ngsyha'h y-nog ebunmaoth grah'n, h'ehye shtunggli f'llll kadishtu athg. Gnaiih h'ilyaa f'stell'bsna 'ai shagg chtenff hai, 'fhalma lloig llllagl naflDagon.",
-			"bump": 1529351561848
+			"bump": 1529425028775
 		},
 		{
 			"id": 4,
 			"userId": "auth0|5b1946a155f2302168ff47c3",
 			"title": "Welcome to the Off the Cuff Forum!",
 			"initialPost": "This is the initial post text",
-			"bump": 1528834368722
+			"bump": 1529425046864
 		},
 		{
 			"userId": "auth0|5b1946a155f2302168ff47c3",
@@ -269,6 +269,20 @@
 			"content": "cool it does!",
 			"timestamp": 1529352455360,
 			"id": 24
+		},
+		{
+			"threadId": "3",
+			"userId": "auth0|5b1946a155f2302168ff47c3",
+			"content": "bump",
+			"timestamp": 1529425028775,
+			"id": 25
+		},
+		{
+			"threadId": "4",
+			"userId": "auth0|5b1946a155f2302168ff47c3",
+			"content": "bump",
+			"timestamp": 1529425046864,
+			"id": 26
 		}
 	],
 	"episodes": [
@@ -277,119 +291,136 @@
 			"title": "An Inaugural Podcast",
 			"cast": "Grace, Ash, Levi, and Sam",
 			"description": "The first podcast the cast ever records, they talk about preshow anxiety, the McCollough Effect and some life stories.",
-			"url": ""
+			"url": "./mp3/Off the Cuff 1 (11-21-17).mp3",
+			"date": 1511244000000
 		},
 		{
 			"id": 2,
 			"title": "Laser Shooting Robot",
 			"cast": "Grace, Ash, Levi, and Sam",
 			"description": "The group talks about laser shooting robots, the EA controversy, and some of their favcrite video games from the past",
-			"url": ""
+			"url": "",
+			"date": 1511848800000
 		},
 		{
 			"id": 3,
 			"title": "Grace's Secret Murder",
 			"cast": "Grace, Ash, Levi, and Sam",
 			"description": "The group talks about getting offered drugs, non-threatening people banging on cars, and Grace's childhood murder attempt.",
-			"url": ""
+			"url": "",
+			"date": 1512453600000
 		},
 		{
 			"id": 4,
 			"title": "The First Kiss Conundrum",
 			"cast": "Grace, Ash, Levi, and Sam",
 			"description": "The group talks about first kisses, awkward dates, and saying things ironically.",
-			"url": ""
+			"url": "",
+			"date": 1513058400000
 		},
 		{
 			"id": 5,
 			"title": "Moving, Millennials, and Mice, Oh My!",
 			"cast": "Grace, Levi, and guest Eric",
 			"description": "The group talks about moving out of vermin infested apartments, things millenials have ruined, and the future of shopping at woodmans.",
-			"url": ""
+			"url": "",
+			"date": 1513663200000
 		},
 		{
 			"id": 6,
 			"title": "Snapchat Streaks Galore!",
 			"cast": "Ash, Levi, and Sam",
 			"description": "The group talks about Karma, practical christmas gifts, snapchat streaks, and more.",
-			"url": ""
+			"url": "",
+			"date": 1514268000000
 		},
 		{
 			"id": 7,
 			"title": "The Breakfast Club",
 			"cast": "Grace, Levi, and Sam",
 			"description": "The group talks about the Logan Paul situation, drunk people, breakfast, and high school detention.",
-			"url": ""
+			"url": "",
+			"date": 1514872800000
 		},
 		{
 			"id": 8,
 			"title": "College Hi-jinks",
 			"cast": "Grace, Ash, and Levi",
 			"description": "The group talks about scam phone calls, college hi-jinks, and terrifying childhood experiences.",
-			"url": ""
+			"url": "",
+			"date": 1515477600000
 		},
 		{
 			"id": 9,
 			"title": "Psychological Warfare",
 			"cast": "Grace, Levi, and Sam",
 			"description": "The group talks about using the Andy Griffith Theme for psychological warfare, awkward introductions, and spiders.",
-			"url": ""
+			"url": "",
+			"date": 1516082400000
 		},
 		{
 			"id": 10,
 			"title": "Weezer versus Panic!",
 			"cast": "Grace, Levi, and Sam",
 			"description": "The group talks about seeing live music, a crazy cat-napper, and the comment question of the day!",
-			"url": ""
+			"url": "",
+			"date": 1516687200000
 		},
 		{
 			"id": 11,
 			"title": "Fiddler Crab Fight Club",
 			"cast": "Grace, Ash, Levi, and Sam",
 			"description": "The group talks about interviews, underground crab fight clubs, and the pettiest things they've done.",
-			"url": ""
+			"url": "",
+			"date": 1517292000000
 		},
 		{
 			"id": 12,
 			"title": "Razor Scooters: Millenial Death-Traps",
-			"cast": "Grace, Ash, Levi, and Sam",
+			"cast": "Grace, Ash, Levi, Sam, and Guest Evan",
 			"description": "The group talks about razor scooters and their ankle breaking tendencies, passing out, the sophomores, and concert struggles.",
-			"url": ""
+			"url": "",
+			"date": 1517896800000
 		},
 		{
 			"id": 13,
 			"title": "Levi the Fire Guy",
 			"cast": "Grace, Ash, Levi, and Sam",
 			"description": "The group talks about online storage sabotage, Levi's college fire alarm knowledge, and the best furry family members.",
-			"url": ""
+			"url": "",
+			"date": 1518501600000
 		},
 		{
 			"id": 14,
 			"title": "The Symbiotic Spider Sacrifice",
 			"cast": "Grace, Ash, Levi, and Sam",
 			"description": "The group talks about symbiotic relationships with spiders, experiences with snakes and coyotes, and memories of being young and dumb.",
-			"url": ""
+			"url": "",
+			"date": 1519106400000
 		},
 		{
 			"id": 15,
 			"title": "Fight the Cast With the Gals",
 			"cast": "Grace, Ash, Levi, and Sam",
 			"description": "The group fights with each other over cell phone voice mail, musical taste, and generally bullying each other.",
-			"url": ""
+			"url": "",
+			"date": 1519711200000
 		},
 		{
 			"id": 16,
 			"title": "Metric Messiah",
 			"cast": "Grace, Ash, Levi, and Sam",
 			"description": "The group talks about how spoons are mugs, how many dogs equal a horse, and disney princesses reimagined as cement mixers.",
-			"url": ""
+			"url": "",
+			"date": 1520316000000
 		},
 		{
 			"id": 17,
 			"title": "The Tech Talk",
-			"cast": "Grace, Levi, Sam, and guest Paxton",
+			"cast": "Levi, Sam, and guest Paxton",
 			"description": "The group talks about working in retail, new technology, and strange interactions with customers.",
-			"url": ""
+			"url": "",
+			"date": 1520917200000
 		}
 	]
 }

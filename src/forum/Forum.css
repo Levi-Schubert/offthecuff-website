@@ -3,12 +3,14 @@
 	max-width:850px;
 }
 #pages{
-	max-height: calc(100vh - 260px);
+	max-height: calc(100vh - 280px);
+	min-height: calc(100vh - 280px);
 	overflow-y: auto;
 }
 
 #post__pages{
 	max-height: calc(100vh - 340px);
+	min-height: calc(100vh - 340px);
 	overflow-y: auto;
 }
 

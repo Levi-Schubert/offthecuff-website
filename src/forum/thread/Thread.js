@@ -104,7 +104,7 @@ export default class Thread extends Component{
 	render(){
 		return(
 				<div>
-					<a className="title"><img id="thread__list" className="image is-32x32"src={left} onClick={this.props.back}/></a>
+					<a className="title"><img id="thread__list" className="image is-32x32"src={left} onClick={this.props.back} alt="back"/></a>
 					<h1 className="title">{this.state.title}</h1>
 					<section id="post__pages">
 						{this.loaded()}

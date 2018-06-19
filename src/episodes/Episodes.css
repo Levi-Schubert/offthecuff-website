@@ -1,0 +1,21 @@
+#episodes{
+	width:60%;
+	max-width:850px;
+}
+#pages{
+	max-height: calc(100vh - 280px);
+	min-height: calc(100vh - 280px);
+	overflow-y: auto;
+}
+
+#episode__title{
+	margin: 0 0 20px;
+}
+
+#episode__link a{
+	text-decoration: none;
+}
+
+#episode__link a:hover{
+	color: hsl(204, 86%, 53%);
+}
