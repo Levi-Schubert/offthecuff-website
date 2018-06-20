@@ -9,8 +9,8 @@
 }
 
 #post__pages{
-	max-height: calc(100vh - 340px);
-	min-height: calc(100vh - 340px);
+	max-height: calc(100vh - 374px);
+	min-height: calc(100vh - 374px);
 	overflow-y: auto;
 }
 

@@ -12,7 +12,6 @@ import decode from "jwt-decode"
 
 
 
-
 class App extends Component {
 
 	constructor(props) {
