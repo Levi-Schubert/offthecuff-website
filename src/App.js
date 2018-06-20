@@ -38,7 +38,7 @@ class App extends Component {
 			// let access = this.state.auth.getAccessToken()
 			if (idToken) {
 				this.setState({ userId: decode(idToken).sub, authenticated: true, })
-				// window.history.replaceState({}, document.title, ".")
+				window.history.replaceState({}, document.title, ".")
 				fetch(`${this.state.api}/users/${decode(idToken).sub}`).then(r => r.json()).then(user => {
 					if (user.hasOwnProperty("id")) {
 						this.setState({ userData: user })
@@ -70,7 +70,6 @@ class App extends Component {
 
 	showView = function (e) {
 		let currentview = null;
-		// debugger
 		if (e.hasOwnProperty("target")) {
 			currentview = e.target.id.split("__")[1]
 			if (e.target.id.split("__").length > 2) {
@@ -95,11 +94,10 @@ class App extends Component {
 			case ("login"):
 				return <Login />
 			case ("logout"):
-				return <Home />
+				return <Home api={this.state.api} mediaHandler={this.mediaHandler}/>
 			case ("home"):
 			default:
-				// this.checkCredentials()
-				return <Home />
+				return <Home api={this.state.api} mediaHandler={this.mediaHandler}/>
 		}
 	}
 
