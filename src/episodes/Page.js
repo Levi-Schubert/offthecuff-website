@@ -9,7 +9,7 @@ export default class Page extends Component{
 			<div>
 				{
 					this.props.page.map(e => {
-					return <Episode viewHandler={this.props.viewHandler} changeView={this.props.changeView} key={e.id} episode={e} />
+					return <Episode viewHandler={this.props.viewHandler} changeView={this.props.changeView} mediaHandler={this.props.mediaHandler} key={e.id} episode={e} />
 				})}
 			</div>
 		)

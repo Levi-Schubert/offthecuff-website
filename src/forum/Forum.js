@@ -76,7 +76,7 @@ export default class Forum extends Component {
 		if(this.state.newThread){
 			return(
 				<div className="notification thread__box">
-					<input id="title" type="text" className="input new__thread" value={this.state.title} onChange={this.change} placeholder="Thread title"/>
+					<input id="title" autoComplete="off" type="text" className="input new__thread" value={this.state.title} onChange={this.change} placeholder="Thread title"/>
 					<textarea id="post" type="text" className="input new__thread" value={this.state.post} onChange={this.change} placeholder="Initial post"/>
 					<input type="button" className="button is-info new__thread" value="Create" onClick={this.create} />
 				</div>

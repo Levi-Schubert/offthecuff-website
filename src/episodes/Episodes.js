@@ -20,7 +20,7 @@ export default class Episodes extends Component{
 
 	loaded = function(){
 		if(this.state.pages.length > 0){
-			return <Page viewHandler={this.props.viewHandler} changeView={this.changeView} page={this.state.pages[this.state.currentPage]} />
+			return <Page viewHandler={this.props.viewHandler} changeView={this.changeView} page={this.state.pages[this.state.currentPage]} mediaHandler={this.props.mediaHandler}/>
 		}
 	}.bind(this)
 
