@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Nav.css"
+import logo from ".././img/logo.jpg"
 
 export default class Nav extends Component{
 
@@ -26,13 +27,15 @@ export default class Nav extends Component{
     render(){
         return(
             <nav className="navbar">
-                <div className="navbar-brand container-row">
+				<img id="logo" src={logo} alt="logo" />
+                <div id="navbar" className="navbar-brand container-row">
                     <a id="nav__home" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Home</a>
                     <a id="nav__episodes" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Episodes</a>
                     <a id="nav__forum" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Forum</a>
 					{this.authenticated(this.props.authenticated)}
 					{this.profile(this.props.authenticated)}
                 </div>
+				<img id="logo" className="is-invisible" src={logo} alt="logo" />
             </nav>
         )
     }
