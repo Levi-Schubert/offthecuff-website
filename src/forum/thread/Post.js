@@ -14,7 +14,7 @@ export default class Post extends Component{
 							<div className="level">
 								<div className="level-item">
 									<a className="image is-64x64">
-										<img id={`thread__profile__${this.props.post.user.id}`} onClick={this.props.viewHandler} className="is-rounded" src={this.props.post.user.img}/>
+										<img id={`thread__profile__${this.props.post.user.id}`} onClick={this.props.viewHandler} className="is-rounded" src={this.props.post.user.img} alt="profile"/>
 									</a>
 								</div>
 							</div>

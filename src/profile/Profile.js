@@ -23,7 +23,7 @@ export default class Profile extends Component{
     editable = function(){
         if(this.props.user === this.props.authedUser){
             return  <div className="media-right">
-                        <a onClick={this.edit}><img className="image is-32x32"src={edit}/></a>
+                        <a onClick={this.edit}><img className="image is-32x32"src={edit} alt="edit"/></a>
                     </div>
         }
     }
@@ -86,6 +86,8 @@ export default class Profile extends Component{
         switch(this.state.error){
             case("name_taken"):
                 return <div className="level notification is-danger"><h3 className="is-title is-warning level-item">Display name is taken</h3></div>
+			default:
+				
         }
     }.bind(this)
 
@@ -164,7 +166,7 @@ export default class Profile extends Component{
                     <div className="level">
                         <div className="level-item">
                             <figure className="image is-128x128">
-                                <img className="is-rounded" src={this.state.user.img}/>
+                                <img className="is-rounded" src={this.state.user.img} alt="profile"/>
                             </figure>
                         </div>
                     </div>

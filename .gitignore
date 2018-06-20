@@ -22,3 +22,6 @@ yarn-error.log*
 
 # notes
 notes.txt
+
+# mp3
+/src/mp3

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import Auth from './auth/Auth.js'
+import Episodes from "./episodes/Episodes"
 import Forum from "./forum/Forum"
-import Profile from "./profile/Profile"
+import Home from "./home/Home"
 import Login from "./login/Login"
 import Navbar from "./nav/Nav"
-import Home from "./home/Home"
+import Player from "./player/Player"
+import Profile from "./profile/Profile"
 import decode from "jwt-decode"
 
 
@@ -26,13 +28,15 @@ class App extends Component {
 		authenticated: false,
 		userData: {},
 		api: "http://localhost:5001",
-		profile: null
+		profile: null,
+		playing: false,
+		mediaUrl: ""
 	}
 
 	checkCredentials = function () {
 		if (!this.state.authenticated) {
 			let idToken = this.state.auth.getIdToken()
-			let access = this.state.auth.getAccessToken()
+			// let access = this.state.auth.getAccessToken()
 			if (idToken) {
 				this.setState({ userId: decode(idToken).sub, authenticated: true, })
 				// window.history.replaceState({}, document.title, ".")
@@ -67,7 +71,6 @@ class App extends Component {
 
 	showView = function (e) {
 		let currentview = null;
-		let user = null
 		// debugger
 		if (e.hasOwnProperty("target")) {
 			currentview = e.target.id.split("__")[1]
@@ -84,6 +87,8 @@ class App extends Component {
 
 	view = () => {
 		switch (this.state.view) {
+			case ("episodes"):
+				return <Episodes api={this.state.api} mediaHandler={this.mediaHandler}/>
 			case ("profile"):
 				return <Profile api={this.state.api} user={this.state.profile} authedUser={this.state.userId} />
 			case ("forum"):
@@ -99,6 +104,23 @@ class App extends Component {
 		}
 	}
 
+	mediaHandler = function(url){
+		if(url !== "none"){
+			if(this.state.playing){
+				this.setState({playing: false})
+			}
+			this.setState({playing: true, mediaUrl: url})
+		}else{
+			this.setState({playing: false, mediaUrl: ""})
+		}
+	}.bind(this)
+
+	media = function(){
+		if(this.state.playing){
+			return <Player url={this.state.mediaUrl} mediaHandler={this.mediaHandler}/>
+		}
+	}
+
 	render() {
 		return (
 			<div id="page" className="hero-body">
@@ -107,6 +129,7 @@ class App extends Component {
 					<hr />
 				</div>
 				{this.view()}
+				{this.media()}
 			</div>
 		)
 	}

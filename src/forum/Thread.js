@@ -15,7 +15,7 @@ export default class Thread extends Component{
 							<div className="level">
 								<div className="level-item">
 									<a className="image is-64x64">
-										<img id={`thread__profile__${this.props.thread.user.id}`} onClick={this.props.viewHandler} className="is-rounded" src={this.props.thread.user.img}/>
+										<img id={`thread__profile__${this.props.thread.user.id}`} onClick={this.props.viewHandler} className="is-rounded" src={this.props.thread.user.img} alt="profile"/>
 									</a>
 								</div>
 							</div>
