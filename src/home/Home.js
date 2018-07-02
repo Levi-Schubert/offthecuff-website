@@ -16,6 +16,7 @@ export default class Home extends Component{
 		}
 	}
 
+	//get the most recent episode
 	load = function(){
 		fetch(`${this.props.api}/episodes?_sort=id&_order=desc`).then(r => r.json()).then(episodes => {
 			this.setState({episode: episodes[0]})

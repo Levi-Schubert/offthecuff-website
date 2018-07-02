@@ -11,18 +11,21 @@ export default class Thread extends Component{
 		newPost: ""
 	}
 
+	//check waiting for data to be loaded into state before render
 	loaded = function(){
 		if(this.state.pages.length > 0){
 			return <Page viewHandler={this.props.viewHandler} page={this.state.pages[this.state.currentPage]} />
 		}
 	}.bind(this)
 
+	//handler for the new post form
 	change = function(evt){
 		const stateToChange = {}
 		stateToChange[evt.target.id] = evt.target.value
 		this.setState(stateToChange)
 	}.bind(this)
 
+	//function to create the post on submit
 	post = function(){
 		//get post from state and post to api
 		let post = {
@@ -52,6 +55,7 @@ export default class Thread extends Component{
 
 	}.bind(this)
 
+	//check to see if the user is authenticated, if not disables the new post form
 	newPost(){
 		if(this.props.authedUser === null){
 			return (<div className="notification thread__box post__box">

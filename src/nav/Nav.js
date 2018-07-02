@@ -10,6 +10,7 @@ export default class Nav extends Component{
         }
     }
 
+	// returns the correct login option based on if the user is authenticated
     authenticated = function(authenticated){
         if(authenticated){
             return <a id="nav__logout" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Logout</a>
@@ -18,6 +19,7 @@ export default class Nav extends Component{
         }
 	}.bind(this)
 	
+	//if user is authenticated display link to their profile
 	profile = function(authenticated){
 		if(authenticated){
 			return <a id={`nav__profile${this.props.authedUser}`} className="navbar-item is-unselectable" onClick={this.props.viewHandler}><figure className="image is-24x24"><img id={`nav__profile${this.props.authedUser}`} className="is-rounded" src={this.props.user.img} alt="Profile"/> </figure></a>
