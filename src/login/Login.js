@@ -4,7 +4,8 @@ import "./Login.css"
 
 export default class Login extends Component{
     constructor(props){
-        super(props)
+		super(props)
+		//allow the user enough time to see the redirect message
         setTimeout(function(){
         let auth = new Auth()
         auth.login()

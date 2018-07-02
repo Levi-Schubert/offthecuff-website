@@ -22,13 +22,6 @@
 			"img": "https://s.gravatar.com/avatar/b57114922bd6bcd457e34440bbba72af?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fje.png"
 		},
 		{
-			"id": "auth0|5b1fea6b157859716f2deed3",
-			"displayName": "Levi",
-			"bio": "\"This is a super deep bio with a quote from an author\" -Abraham Jefferson",
-			"status": ":D",
-			"img": "https://s.gravatar.com/avatar/e6749b72d014294a5d849efff1b5cfd3?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fle.png"
-		},
-		{
 			"id": "auth0|5b202124a76b70216925f708",
 			"displayName": "David",
 			"bio": "too cool for school",

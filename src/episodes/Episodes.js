@@ -10,6 +10,7 @@ export default class Episodes extends Component{
 		currentPage: 0
 	}
 
+	//handler for pagination
 	changePage = function(e){
 		if(e.target.id === "next"){
 			this.setState({currentPage: (this.state.currentPage + 1)})
@@ -18,12 +19,14 @@ export default class Episodes extends Component{
 		}
 	}.bind(this)
 
+	//check waiting for data to be loaded into state before render
 	loaded = function(){
 		if(this.state.pages.length > 0){
 			return <Page viewHandler={this.props.viewHandler} changeView={this.changeView} page={this.state.pages[this.state.currentPage]} mediaHandler={this.props.mediaHandler}/>
 		}
 	}.bind(this)
 
+	//obtains episodes from api and arranges them into pages of five
 	getEpisodes = function(){
 		fetch(`${this.props.api}/episodes?_sort=id&_order=desc`).then(r => r.json()).then(episodes => {
 			let pagesArr = []

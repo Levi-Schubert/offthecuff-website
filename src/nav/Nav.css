@@ -1,10 +1,33 @@
+#logo{
+	height:64px;
+}
+
 .navbar-brand{
     text-align: center;
-    margin: 0 auto;
+    margin: 0 20px;
     justify-content: center;
     align-items: center;
 }
 
 .navbar{
-    width: 100%;
+	width: 100%;
+}
+
+#nav__color{
+	padding:24px 10px 12px;
+	background-color: hsl(0, 0%, 96%);
+	border-bottom: 2px solid darkgray;
+	margin-bottom:20px;
+}
+
+.right{
+	margin-left:auto;
+}
+
+#nav__logout{
+	margin-bottom: auto;
+}
+
+#nav__login{
+	margin-bottom: auto;
 }

@@ -20,6 +20,7 @@ export default class Profile extends Component{
         userList: []
     }
 
+	//if user is viewing their own profile display the edit mode button
     editable = function(){
         if(this.props.user === this.props.authedUser){
             return  <div className="media-right">
@@ -28,6 +29,7 @@ export default class Profile extends Component{
         }
     }
 
+	//boolean switch for the edit mode
     edit = function(){
         if(this.state.editing){
             this.setState({editing: false})
@@ -36,12 +38,14 @@ export default class Profile extends Component{
         }
     }.bind(this)
 
+	//event handler for the input forms
     change = function(evt){
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }.bind(this)
 
+	//saves the profile updates
     save = function(){
         let userUpdate = {id: this.state.user.id, displayName: this.state.user.displayName, bio: this.state.bio_edits, status: this.state.status_edits, img: this.state.user.img}
         document.getElementById("save_changes").classList.toggle("is-loading")
@@ -59,15 +63,18 @@ export default class Profile extends Component{
 
     }.bind(this)
 
+	//update display name method
     saveName = function(){
         this.setState({error: ""})
-        let error = false
+		let error = false
+		//check username against current users for a duplicate
         this.state.userList.forEach(name => {
             if(name === this.state.name_edits && error !== true){
                 error = true
                 this.setState({error: "name_taken"})
             }
-        })
+		})
+		//if no conflict update username
         if(error === false){
             let userUpdate = {id: this.state.user.id, displayName: this.state.name_edits, bio: this.state.user.bio, status: this.state.user.status, img: this.state.user.img}
             fetch(`${this.props.api}/users/${this.state.user.id}`, {
@@ -82,6 +89,7 @@ export default class Profile extends Component{
         }
     }.bind(this)
 
+	//inform the user if the display name is taken
     notification = function(){
         switch(this.state.error){
             case("name_taken"):
@@ -91,6 +99,7 @@ export default class Profile extends Component{
         }
     }.bind(this)
 
+	//if user has not set a display name display form to input a name
     displayName = function(){
         if(this.state.userList.length > 0 && this.state.user.displayName === ""){
             return <div id="name_change" className="level"> <input id="name_edits" type="text" value={this.state.name_edits} className="input level-item" onChange={this.change} placeholder="Please choose a display name"/> <input type="button" id="save_name" className="button is-info level-item" value="Save" onClick={this.saveName}/></div>
@@ -99,6 +108,7 @@ export default class Profile extends Component{
         }
     }
 
+	//returns edit forms if user is in edit mode
     editing = function(comp){
         switch(comp){
             case("status"):
@@ -139,6 +149,7 @@ export default class Profile extends Component{
 		})
 	}.bind(this)
 
+	//check to see if loading a new user
 	componentWillReceiveProps(nextProps) {
 		if(nextProps.user !== this.state.user.id){
 			this.getData(nextProps.user)

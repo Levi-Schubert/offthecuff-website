@@ -3,6 +3,7 @@ import "./Player.css"
 
 export default class Player extends Component{
 
+	//if user closes out of player remove the current url to media
 	handle = function(){
 		this.props.mediaHandler("none")
 	}.bind(this)

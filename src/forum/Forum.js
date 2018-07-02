@@ -16,6 +16,7 @@ export default class Forum extends Component {
 		post: ""
 	}
 
+	//handler for the boolean display of new thread
 	newHandle = function(){
 		if(this.state.newThread === false){
 			this.setState({newThread: true})
@@ -24,12 +25,14 @@ export default class Forum extends Component {
 		}
 	}.bind(this)
 
+	//handler for the input forms
 	change = function(evt){
 		const stateToChange = {}
 		stateToChange[evt.target.id] = evt.target.value
 		this.setState(stateToChange)
 	}.bind(this)
 
+	//function for creating a new thread
 	create = function(){
 		//create new thread
 		let time = new Date().getTime()
@@ -72,6 +75,7 @@ export default class Forum extends Component {
 		})
 	}.bind(this)
 
+	//dynamic rendering of the new thread from
 	newThread = function(){
 		if(this.state.newThread){
 			return(
@@ -91,6 +95,7 @@ export default class Forum extends Component {
 		}
 	}
 
+	//check waiting for data to be loaded into state before render
 	loaded = function(){
 		if(this.state.pages.length > 0){
 			return <Page viewHandler={this.props.viewHandler} changeView={this.changeView} page={this.state.pages[this.state.currentPage]} />
