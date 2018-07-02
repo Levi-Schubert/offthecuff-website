@@ -36,7 +36,8 @@ class App extends Component {
 		if (!this.state.authenticated) {
 			let idToken = this.state.auth.getIdToken()
 			// let access = this.state.auth.getAccessToken()
-			if (idToken) {
+			if (idToken && this.checkIssueDate(decode(idToken).iat)) {
+				// this.checkIssueDate(decode(idToken).iat)
 				this.setState({ userId: decode(idToken).sub, authenticated: true, })
 				window.history.replaceState({}, document.title, ".")
 				fetch(`${this.state.api}/users/${decode(idToken).sub}`).then(r => r.json()).then(user => {
@@ -60,9 +61,24 @@ class App extends Component {
 						}).then()
 					}
 				})
+			}else{
+				if(idToken){
+					window.history.replaceState({}, document.title, ".")
+				}
 			}
 		}
 	}.bind(this)
+
+	checkIssueDate = function (ts){
+		let validTs = parseInt((ts + "000"), 10)
+		let currentTime = new Date().getTime()
+
+		if(validTs >= (currentTime - 6000) && validTs <= (currentTime + 6000)){
+			return true
+		}
+		return false
+
+	}
 
 	componentDidMount() {
 		this.checkCredentials()
