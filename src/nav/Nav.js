@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Nav.css"
-import logo from ".././img/logo.jpg"
+import logo from ".././img/logo.png"
 
 export default class Nav extends Component{
 
@@ -13,31 +13,31 @@ export default class Nav extends Component{
 	// returns the correct login option based on if the user is authenticated
     authenticated = function(authenticated){
         if(authenticated){
-            return <a id="nav__logout" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Logout</a>
+            return <a id="nav__logout" className="log title is-5 navbar-item is-unselectable" onClick={this.props.viewHandler}>Logout</a>
         }else{
-            return <a id="nav__login" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Login</a>
+            return <a id="nav__login" className="log title is-5 navbar-item is-unselectable" onClick={this.props.viewHandler}>Login</a>
         }
 	}.bind(this)
 	
 	//if user is authenticated display link to their profile
 	profile = function(authenticated){
 		if(authenticated){
-			return <a id={`nav__profile${this.props.authedUser}`} className="navbar-item is-unselectable" onClick={this.props.viewHandler}><figure className="image is-24x24"><img id={`nav__profile${this.props.authedUser}`} className="is-rounded" src={this.props.user.img} alt="Profile"/> </figure></a>
+			return <a id={`nav__profile${this.props.authedUser}`} className="is-unselectable right" onClick={this.props.viewHandler}><figure className="image is-48x48"><img id={`nav__profile${this.props.authedUser}`} className="is-rounded" src={this.props.user.img} alt="Profile"/> </figure></a>
 		}
 	}
 
     render(){
         return(
-            <nav className="navbar">
+            <nav id="nav__color" className="navbar">
 				<img id="logo" src={logo} alt="logo" />
                 <div id="navbar" className="navbar-brand container-row">
-                    <a id="nav__home" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Home</a>
-                    <a id="nav__episodes" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Episodes</a>
-                    <a id="nav__forum" className="navbar-item is-unselectable" onClick={this.props.viewHandler}>Forum</a>
+                    <a id="nav__home" className="title is-5 navbar-item is-unselectable" onClick={this.props.viewHandler}>Home</a>
+                    <a id="nav__episodes" className="title is-5 navbar-item is-unselectable" onClick={this.props.viewHandler}>Episodes</a>
+                    <a id="nav__forum" className="title is-5 navbar-item is-unselectable" onClick={this.props.viewHandler}>Forum</a>
 					{this.authenticated(this.props.authenticated)}
-					{this.profile(this.props.authenticated)}
                 </div>
-				<img id="logo" className="is-invisible" src={logo} alt="logo" />
+					{this.profile(this.props.authenticated)}
+				{/* <img id="logo" className=" is-invisible right" src={logo} alt="logo" /> */}
             </nav>
         )
     }

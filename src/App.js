@@ -149,7 +149,7 @@ class App extends Component {
 			<div id="page" className="hero-body">
 				<div>
 					<Navbar viewHandler={this.showView} active={this.state.view} authenticated={this.state.authenticated} authedUser={`__${this.state.userId}`} user={this.state.userData} />
-					<hr />
+					{/* <hr /> */}
 				</div>
 				{this.view()}
 				{this.media()}

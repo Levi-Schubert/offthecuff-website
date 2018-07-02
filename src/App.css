@@ -2,8 +2,9 @@ html{
 	overflow-y: hidden;
 }
 
-#logo{
-	height:50px;
+#page{
+	margin-top:0;
+	padding:0;
 }
 
 ::-webkit-scrollbar {
